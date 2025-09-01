@@ -173,7 +173,7 @@ function initHeroAnimations() {
         y: 50,
         duration: 0.8,
       },
-      "-=0.5",
+      "-=0.5"
     )
     .from(
       "#hero button",
@@ -183,7 +183,7 @@ function initHeroAnimations() {
         duration: 0.8,
         stagger: 0.2,
       },
-      "-=0.5",
+      "-=0.5"
     )
     .from(
       "#hero img",
@@ -192,7 +192,7 @@ function initHeroAnimations() {
         x: 100,
         duration: 1,
       },
-      "-=0.5",
+      "-=0.5"
     );
 }
 
@@ -364,7 +364,7 @@ function initHeroAnimations() {
         y: 50,
         duration: 0.8,
       },
-      "-=0.5",
+      "-=0.5"
     )
     .from(
       "#hero button",
@@ -374,7 +374,7 @@ function initHeroAnimations() {
         duration: 0.8,
         stagger: 0.2,
       },
-      "-=0.5",
+      "-=0.5"
     )
     .from(
       "#hero img",
@@ -383,7 +383,7 @@ function initHeroAnimations() {
         x: 100,
         duration: 1,
       },
-      "-=0.5",
+      "-=0.5"
     );
 }
 
@@ -489,14 +489,16 @@ function initializeWebsite() {
 async function updateGitHubStats() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/redolenthalo/discord-bot-website-template",
+      "https://api.github.com/repos/MilkshakeCollective/stachio-bot"
     );
     const data = await response.json();
 
-    document.getElementById("stars-count").textContent =
-      `${data.stargazers_count} Stars`;
-    document.getElementById("forks-count").textContent =
-      `${data.forks_count} Forks`;
+    document.getElementById(
+      "stars-count"
+    ).textContent = `${data.stargazers_count} Stars`;
+    document.getElementById(
+      "forks-count"
+    ).textContent = `${data.forks_count} Forks`;
   } catch (error) {
     console.error("Error fetching GitHub stats:", error);
   }
@@ -504,6 +506,27 @@ async function updateGitHubStats() {
 
 updateGitHubStats();
 setInterval(updateGitHubStats, 300000);
+
+async function updateDiscordStats() {
+  try {
+    const response = await fetch(
+      "https://discord.com/api/guilds/1396235829579485214/widget.json"
+    );
+    const data = await response.json();
+
+    document.getElementById(
+      "discord-online-count"
+    ).textContent = `${data.presence_count} Online`;
+    document.getElementById(
+      "discord-members"
+    ).textContent = `• ${data.members.length} Members`;
+  } catch (error) {
+    console.error("Error fetching Discord stats:", error);
+  }
+}
+
+updateDiscordStats();
+setInterval(updateDiscordStats, 300000);
 
 function scrollToTop() {
   window.scrollTo({
