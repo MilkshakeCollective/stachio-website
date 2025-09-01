@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta & SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stachio - Advanced Discord Safety Bot</title>
+    <meta name="theme-color" content="#aac49b" />
+    <meta
+      name="description"
+      content="Stachio is an advanced Discord bot focused on safety and security, featuring anti-phishing, automod, content filtering, moderation tools, logging, and more to protect your community." />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Stachio - Protect Your Discord Community" />
+    <meta
+      property="og:description"
+      content="Protect your server with advanced moderation, automod, and anti-phishing tools." />
+    <meta property="og:image" content="./images/logo.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Stachio - Protect Your Discord Community" />
+    <meta
+      property="twitter:description"
+      content="Advanced safety & moderation bot for Discord." />
+    <meta property="twitter:image" content="./images/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo.png" />
+
+    <!-- Scripts & Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body
+    class="bg-black text-white overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:bg-[#aac49b] [&::-webkit-scrollbar-thumb]:rounded-full">
+    <!-- Loader -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+      <div
+        class="w-12 h-12 border-4 border-[#aac49b] border-t-transparent rounded-full animate-spin"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full top-0 z-50 bg-black/30 border-b border-white/10 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a href="#hero" class="flex items-center gap-2">
+            <img
+              src="images/logo.png"
+              alt="Stachio Logo"
+              class="w-10 h-10 rounded-lg" />
+            <span
+              class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#aac49b] to-[#2f3e29]"
+              >Stachio</span
+            >
+          </a>
+          <!-- Menu (Desktop) -->
+          <div class="hidden md:flex gap-8">
+            <a href="#hero" class="text-white/70 hover:text-white">Home</a>
+            <a href="#features" class="text-white/70 hover:text-white"
+              >Features</a
+            >
+            <a href="#commands" class="text-white/70 hover:text-white"
+              >Commands</a
+            >
+            <a href="#testimonials" class="text-white/70 hover:text-white"
+              >Testimonials</a
+            >
+          </div>
+          <!-- CTA -->
+          <a href="#" class="hidden md:block">
+            <button
+              class="bg-[#aac49b]/20 hover:bg-[#aac49b]/30 px-6 py-2 rounded-lg transition-all">
+              Add to Discord
+            </button>
+          </a>
+          <!-- Mobile Menu Toggle -->
+          <button
+            onclick="toggleMobileMenu()"
+            class="md:hidden text-white p-2"
+            aria-label="Menu">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path
+                class="menu-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div
+          id="mobileMenu"
+          class="hidden md:hidden mt-2 bg-black/50 rounded-lg p-4 space-y-2">
+          <a href="#hero" class="block text-white/70 hover:text-white">Home</a>
+          <a href="#features" class="block text-white/70 hover:text-white"
+            >Features</a
+          >
+          <a href="#commands" class="block text-white/70 hover:text-white"
+            >Commands</a
+          >
+          <a href="#testimonials" class="block text-white/70 hover:text-white"
+            >Testimonials</a
+          >
+          <a href="#" class="block text-white/70 hover:text-white"
+            >Add to Discord</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center relative overflow-hidden">
+      <div class="absolute inset-0 gradient-bg opacity-10"></div>
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#2f3e29]/40 via-black to-black"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Text -->
+          <div class="text-center lg:text-left space-y-8">
+            <h1 class="text-4xl md:text-6xl font-bold">
+              Protect Your Server with
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-[#aac49b] to-[#2f3e29]"
+                >Stachio</span
+              >
+            </h1>
+            <p class="text-lg md:text-xl text-white/70">
+              The advanced Discord bot built for online safety, automod, and
+              secure community management.
+            </p>
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="#"
+                class="gradient-bg px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition"
+                >Add to Discord</a
+              >
+              <a
+                href="#commands"
+                class="bg-white/10 hover:bg-white/20 px-8 py-4 rounded-xl font-semibold transition"
+                >View Commands</a
+              >
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="relative hidden lg:block">
+            <div
+              class="absolute inset-0 bg-[#aac49b] rounded-3xl blur-3xl opacity-20"></div>
+            <img
+              src="images/logo.png"
+              alt="Stachio Bot"
+              class="relative rounded-3xl w-full max-w-md mx-auto" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-5xl font-bold mb-4">Features of Stachio</h2>
+        <p class="text-xl text-white/70 mb-20">
+          Everything you need to keep your server safe, secure, and thriving.
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-2xl mb-6">
+              🛡️
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Advanced Moderation</h3>
+            <p class="text-white/70">
+              Protect your server with bans, mutes, warnings, strike systems,
+              and real-time filters.
+            </p>
+          </div>
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-2xl mb-6">
+              🚨
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Anti-Phishing & Spam</h3>
+            <p class="text-white/70">
+              Detect and block malicious links, spam, and raids automatically.
+            </p>
+          </div>
+          <div class="feature-card p-8 rounded-2xl">
+            <div
+              class="w-14 h-14 gradient-bg rounded-xl flex items-center justify-center text-2xl mb-6">
+              📊
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Transparency & Logs</h3>
+            <p class="text-white/70">
+              Every action is logged for admins, ensuring full transparency and
+              accountability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Commands -->
+    <section id="commands" class="py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-5xl font-bold mb-4">Commands</h2>
+        <p class="text-xl text-white/70 mb-20">
+          Explore powerful commands designed for safety and moderation.
+        </p>
+        <div id="commands-container" class="space-y-6"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-5xl font-bold mb-4">What Our Users Say</h2>
+        <p class="text-xl text-white/70 mb-20">
+          See how Stachio helps communities stay safe.
+        </p>
+        <div
+          class="flex overflow-x-auto space-x-8 pb-10 [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:bg-[#aac49b]">
+          <div
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
+            <p class="text-white/70 text-lg mb-4">
+              “Stachio instantly reduced spam and phishing in our server. It’s a
+              lifesaver for safety.”
+            </p>
+            <h4 class="text-xl font-bold">Alex Nightshade</h4>
+            <p class="text-sm text-white/70">Community Moderator</p>
+          </div>
+          <div
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
+            <p class="text-white/70 text-lg mb-4">
+              “The moderation tools are intuitive and powerful. Stachio makes
+              managing servers stress-free.”
+            </p>
+            <h4 class="text-xl font-bold">Luna Everstorm</h4>
+            <p class="text-sm text-white/70">Server Admin</p>
+          </div>
+          <div
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
+            <p class="text-white/70 text-lg mb-4">
+              “I replaced multiple bots with Stachio. Everything we need for
+              safety is in one place.”
+            </p>
+            <h4 class="text-xl font-bold">Ronan Void</h4>
+            <p class="text-sm text-white/70">Server Owner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect -->
+    <section class="bg-black py-32 text-center">
+      <h2 class="text-5xl font-bold mb-4">Connect With Us</h2>
+      <p class="text-xl text-white/70 mb-20">
+        Join our community and contribute to development.
+      </p>
+      <div class="flex flex-col lg:flex-row gap-8 items-center justify-center">
+        <!-- GitHub Card -->
+        <div class="feature-card p-6 rounded-2xl max-w-md w-full">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center text-2xl">
+              🐙
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Source Code</h3>
+              <p class="text-white/70 text-sm">View on GitHub</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex gap-4 text-white/70 text-sm">
+              <span id="stars-count">⭐ Loading...</span>
+              <span id="forks-count">🍴 Loading...</span>
+            </div>
+            <a
+              href="https://github.com/MilkshakeCollective/stachio-bot"
+              class="bg-[#2f3e29] hover:bg-[#aac49b] text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+              >View Source</a
+            >
+          </div>
+        </div>
+        <!-- Discord Card -->
+        <div class="feature-card p-6 rounded-2xl max-w-md w-full">
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="images/logo.png"
+              alt="Server Icon"
+              class="w-12 h-12 rounded-xl" />
+            <div>
+              <h3 class="text-xl font-bold">Stachio Community</h3>
+              <p class="text-white/70 text-sm">Official Discord Server</p>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <div class="flex gap-4 text-white/70 text-sm">
+              <span class="flex items-center gap-1"
+                ><span class="w-2 h-2 rounded-full bg-green-500"></span>100
+                Online</span
+              >
+              <span>• 250 Members</span>
+            </div>
+            <a
+              href="https://discord.gg/wSAkewmzAM"
+              class="bg-[#5865F2] hover:bg-[#4752C4] text-white text-sm font-medium px-4 py-2 rounded-lg transition"
+              >Join Server</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-16 border-t border-white/10">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12">
+        <div>
+          <img src="./images/logo.png" alt="Stachio Logo" class="h-10 mb-6" />
+          <p class="text-lg text-white/70">
+            Stachio is the ultimate bot for online safety and community
+            protection, with automod, moderation, anti-phishing, and more.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#hero" class="text-white/70 hover:text-white">Home</a>
+            </li>
+            <li>
+              <a href="#features" class="text-white/70 hover:text-white"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a href="#commands" class="text-white/70 hover:text-white"
+                >Commands</a
+              >
+            </li>
+            <li>
+              <a href="#testimonials" class="text-white/70 hover:text-white"
+                >Testimonials</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+          <ul class="space-y-2">
+            <li>
+              <a href="#" class="text-white/70 hover:text-white">Invite</a>
+            </li>
+            <li>
+              <a href="#" class="text-white/70 hover:text-white">Discord</a>
+            </li>
+            <li>
+              <a href="#" class="text-white/70 hover:text-white">GitHub</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="mt-12 border-t border-white/20 pt-6 text-center text-sm text-white/50">
+        © 2025 Stachio. All rights reserved. • Not affiliated with Discord Inc.
+      </div>
+    </footer>
+  </body>
+</html>
