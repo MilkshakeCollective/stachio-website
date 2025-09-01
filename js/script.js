@@ -16,50 +16,18 @@ const commandsData = {
     ],
   },
   category2: {
-    icon: "⚙️",
-    title: "Category 2",
+    icon: "📜",
+    title: "Category 1",
     commands: [
       {
-        name: "/command3",
-        description: "Description of command3",
-        permission: "Admin",
-      },
-      {
-        name: "/command4",
-        description: "Description of command4",
-        permission: "Admin",
-      },
-    ],
-  },
-  category3: {
-    icon: "🎮",
-    title: "Category 3",
-    commands: [
-      {
-        name: "/command5",
-        description: "Description of command5",
+        name: "/command1",
+        description: "Description of command1",
         permission: "All",
       },
       {
-        name: "/command6",
-        description: "Description of command6",
+        name: "/command2",
+        description: "Description of command2",
         permission: "All",
-      },
-    ],
-  },
-  category4: {
-    icon: "🛠️",
-    title: "Category 4",
-    commands: [
-      {
-        name: "/command7",
-        description: "Description of command7",
-        permission: "Mod",
-      },
-      {
-        name: "/command8",
-        description: "Description of command8",
-        permission: "Mod",
       },
     ],
   },
