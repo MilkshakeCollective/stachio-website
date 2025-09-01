@@ -1,26 +1,38 @@
 const partnersData = [
   {
-    name: "Discord Safety Alliance",
-    description: "Supports community protection initiatives.",
-    url: "https://discord.gg/example1",
+    name: "Danske Gamers",
+    description: "Danish gaming community focused on gaming and fun.",
+    url: "https://discord.gg/danskegamers",
+    logo: "https://cdn.discordapp.com/icons/109721206449569792/a_b75df2dc521279624caaf8cf16a54378.gif?size=512",
+  },
+  {
+    name: "Milkshake Collective",
+    description: "Community hub for developers and online safety enthusiasts.",
+    url: "/discord",
+    logo: "https://github.com/MilkshakeCollective.png",
+  },
+  {
+    name: "Partner With Us 1",
+    description: "Want to see your community featured here? Reach out!",
+    url: "#",
     logo: "images/logo.png",
   },
   {
-    name: "Secure Servers Inc.",
-    description: "Partnering for safer servers.",
-    url: "https://secure.example.com",
+    name: "Partner With Us 2",
+    description: "Looking for collaboration? Contact us to join!",
+    url: "#",
     logo: "images/logo.png",
   },
   {
-    name: "SafeGaming Network",
-    description: "Community-driven safety projects.",
-    url: "https://community.example.com",
+    name: "Partner With Us 3",
+    description: "Your community could be next. Partner with Stachio!",
+    url: "#",
     logo: "images/logo.png",
   },
   {
-    name: "BotGuard",
-    description: "Moderation and anti-spam solutions.",
-    url: "https://botguard.example.com",
+    name: "Partner With Us 4",
+    description: "Grow together with Stachio by becoming a partner.",
+    url: "#",
     logo: "images/logo.png",
   },
 ];
@@ -106,13 +118,15 @@ function createPartnerCard(partner) {
     partner.logo && partner.logo.trim() !== ""
       ? partner.logo
       : "images/logo.png";
+
   return `
-    <div class="partner-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center text-center">
+    <div class="partner-card feature-card p-6 rounded-2xl min-w-[250px] max-w-[300px] flex flex-col items-center text-center
+                bg-white/5 border border-white/10 transition-all hover:bg-white/10 hover:translate-y-[-4px]">
       <img src="${logo}" alt="${partner.name}" class="w-20 h-20 mb-4 rounded-xl object-cover" />
       <h4 class="text-xl font-bold mb-2">${partner.name}</h4>
       <p class="text-white/70 mb-4">${partner.description}</p>
       <a href="${partner.url}" target="_blank" class="bg-[#aac49b]/20 hover:bg-[#aac49b]/30 text-white px-4 py-2 rounded-lg transition">
-        Visit Website
+        Join Discord
       </a>
     </div>
   `;
