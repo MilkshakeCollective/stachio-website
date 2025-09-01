@@ -219,6 +219,20 @@
       </div>
     </section>
 
+    <!-- Partners Section -->
+    <section id="partners" class="py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-5xl font-bold mb-4">Our Partners</h2>
+        <p class="text-xl text-white/70 mb-20">
+          Stachio is proud to collaborate with amazing partners who support
+          online safety.
+        </p>
+        <div
+          id="partners-container"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+      </div>
+    </section>
+
     <!-- Commands -->
     <section id="commands" class="py-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -235,37 +249,87 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-5xl font-bold mb-4">What Our Users Say</h2>
         <p class="text-xl text-white/70 mb-20">
-          See how Stachio helps communities stay safe.
+          See how Stachio helps communities stay safe and organized.
         </p>
         <div
           class="flex overflow-x-auto space-x-8 pb-10 [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-thumb]:bg-[#aac49b]">
+          <!-- Testimonial Card -->
           <div
-            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
-            <p class="text-white/70 text-lg mb-4">
-              “Stachio instantly reduced spam and phishing in our server. It’s a
-              lifesaver for safety.”
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px] flex flex-col justify-between">
+            <p class="text-white/70 text-lg mb-6">
+              “Stachio caught multiple phishing attempts before they reached our
+              members. It's made our server much safer and easier to manage.”
             </p>
-            <h4 class="text-xl font-bold">Alex Nightshade</h4>
-            <p class="text-sm text-white/70">Community Moderator</p>
+            <div class="flex items-center gap-3">
+              <img
+                src="https://cdn.discordapp.com/avatars/345676821343240194/4bbd2725f6bdb9b29235ab88325e8491.webp?size=1024"
+                alt="sarahlfc"
+                class="w-8 h-8 rounded-full object-cover"
+                onerror="this.src='images/logo.png'" />
+              <div class="text-left">
+                <h4 class="text-xl font-bold">sarahlfc</h4>
+                <p class="text-sm text-white/70">Danske Gamers - Owner</p>
+              </div>
+            </div>
           </div>
+
           <div
-            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
-            <p class="text-white/70 text-lg mb-4">
-              “The moderation tools are intuitive and powerful. Stachio makes
-              managing servers stress-free.”
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px] flex flex-col justify-between">
+            <p class="text-white/70 text-lg mb-6">
+              “I love how configurable Stachio is. The automod rules are perfect
+              for keeping spam under control without being intrusive.”
             </p>
-            <h4 class="text-xl font-bold">Luna Everstorm</h4>
-            <p class="text-sm text-white/70">Server Admin</p>
+            <div class="flex items-center gap-3">
+              <img
+                src="https://cdn.discordapp.com/guilds/109721206449569792/users/343021359770763265/avatars/8499e3133bc6986d051a681629488ca3.webp?size=1024"
+                alt="rinaa"
+                class="w-8 h-8 rounded-full object-cover"
+                onerror="this.src='images/logo.png'" />
+              <div class="text-left">
+                <h4 class="text-xl font-bold">rinaa</h4>
+                <p class="text-sm text-white/70">Danske Gamers - Owner</p>
+              </div>
+            </div>
           </div>
+
           <div
-            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px]">
-            <p class="text-white/70 text-lg mb-4">
-              “I replaced multiple bots with Stachio. Everything we need for
-              safety is in one place.”
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px] flex flex-col justify-between">
+            <p class="text-white/70 text-lg mb-6">
+              “Stachio has completely transformed how we manage our community.
+              The moderation tools are smooth, intuitive, and save us so much
+              time.”
             </p>
-            <h4 class="text-xl font-bold">Ronan Void</h4>
-            <p class="text-sm text-white/70">Server Owner</p>
+            <div class="flex items-center gap-3">
+              <img
+                src="https://cdn.discordapp.com/avatars/711712752246325343/437af4fbec3d0e3ded34454966fbd6d6.webp?size=1024"
+                alt="duckodas"
+                class="w-8 h-8 rounded-full object-cover"
+                onerror="this.src='images/logo.png'" />
+              <div class="text-left">
+                <h4 class="text-xl font-bold">duckodas</h4>
+                <p class="text-sm text-white/70">Stachio - Developer</p>
+              </div>
+            </div>
           </div>
+
+          <!-- <div
+            class="testimonial-card feature-card p-8 rounded-2xl min-w-[400px] max-w-[500px] flex flex-col justify-between">
+            <p class="text-white/70 text-lg mb-6">
+              “From anti-phishing to logging actions, Stachio covers everything.
+              Our moderators trust it completely.”
+            </p>
+            <div class="flex items-center gap-3">
+              <img
+                src="images/users/jens.png"
+                alt="Jens Sørensen"
+                class="w-8 h-8 rounded-full object-cover"
+                onerror="this.src='images/logo.png'" />
+              <div class="text-left">
+                <h4 class="text-xl font-bold">Jens Sørensen</h4>
+                <p class="text-sm text-white/70">Moderator</p>
+              </div>
+            </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -380,16 +444,24 @@
           <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
           <ul class="space-y-2">
             <li>
-              <a href="/invite" class="text-white/70 hover:text-white">Invite</a>
+              <a href="/invite" class="text-white/70 hover:text-white"
+                >Invite</a
+              >
             </li>
             <li>
-              <a href="/discord" class="text-white/70 hover:text-white">Discord</a>
+              <a href="/discord" class="text-white/70 hover:text-white"
+                >Discord</a
+              >
             </li>
             <li>
-              <a href="/github" class="text-white/70 hover:text-white">GitHub</a>
+              <a href="/github" class="text-white/70 hover:text-white"
+                >GitHub</a
+              >
             </li>
             <li>
-              <a href="/supportus" class="text-white/70 hover:text-white">Support Us</a>
+              <a href="/supportus" class="text-white/70 hover:text-white"
+                >Support Us</a
+              >
             </li>
           </ul>
         </div>
